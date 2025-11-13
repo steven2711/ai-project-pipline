@@ -1,0 +1,54 @@
+{
+  "name": "p2g-pipeline",
+  "version": "0.1.0",
+  "description": "PRD-to-GitHub Pipeline: Automated pipeline that transforms Product Requirements Documents into fully structured GitHub Projects",
+  "main": "dist/index.js",
+  "bin": {
+    "p2g": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:graphql": "jest tests/integration/issueGenerator.test.ts",
+    "lint": "eslint src/**/*.ts",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "prd",
+    "github",
+    "automation",
+    "ai",
+    "claude",
+    "project-management"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.68.0",
+    "@octokit/graphql": "^9.0.3",
+    "@octokit/rest": "^22.0.1",
+    "chalk": "^5.6.2",
+    "commander": "^14.0.2",
+    "dotenv": "^17.2.3",
+    "inquirer": "^12.10.0",
+    "ora": "^9.0.0",
+    "p-limit": "^7.2.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.3",
+    "@typescript-eslint/parser": "^8.46.3",
+    "eslint": "^9.39.1",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
